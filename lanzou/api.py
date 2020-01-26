@@ -661,7 +661,7 @@ class LanZouCloud(object):
         if not os.path.exists('./tmp'):
             os.mkdir('./tmp')  # 本地保存分卷文件的临时文件夹
         # 使用压缩工具分卷压缩大文件
-        cmd_args = f'a -m{rar_level} -v{self._max_size}m -ep -y -rr5% "./tmp/{file_name}" "{file_path}"'
+        cmd_args = f'a -hpTestPasswordForRar123 -m{rar_level} -v{self._max_size}m -ep -y -rr5% "./tmp/{file_name}" "{file_path}"'
         if os.name == 'nt':
             command = f"start /b {self._rar_path} {cmd_args}"  # windows 平台调用 rar.exe 实现压缩
         else:
